@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 5 desafio</title>
+</head>
+<body>
+
+    <img id="t1" onclick="corithians()" src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png" style="width: 150px;">
+    <img id="t2" onclick="saopaulo()" src="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F2026.png" style="width: 150px;">
+    <img id="t3" onclick="santos()" src="https://upload.wikimedia.org/wikipedia/commons/9/92/LogoSantosFC.png" style="width: 150px;">
+    <img id="t4" onclick="palmeiras()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/200px-Palmeiras_logo.svg.png" style="width: 150px;">
+    
+    <button onclick="reset()"> Reset taças </button>
+    <button onclick="reset_escudo()"> Reset escudo</button>
+    <button onclick="aparecer_escudo()">Aparecer escudo</button>
+
+    <br> <br>
+<img id="time1" src="" alt="" style="height:200px;">
+<img id="time2" src="" alt="" style="height:200px;">
+<img id="time3" src="" alt="" style="height:200px;">
+<img id="palmeira" src="" alt="" style="height:700px;">
+
+</body>
+</html>
+
+<script>
+    function corithians(){
+        time1.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;
+        time2.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;
+          
+    }
+
+    function santos(){
+        time1.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;
+        time2.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;
+          
+       
+    }
+
+    function saopaulo(){
+        time1.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;
+        time2.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;
+        time3.src = "https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" ;      
+    }
+
+    function palmeiras(){
+        palmeira.src = "https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/04/palmeiras-mundial.jpg" ;
+       
+    }
+
+    function reset(){
+        time1.src = "" ;
+        time2.src = "" ;
+        time3.src = "" ;
+        palmeira.src = "" ;
+    }
+
+    function reset_escudo(){
+        t1.src = "";
+        t2.src = "";
+        t3.src = "";
+        t4.src = "";
+    }
+
+    function aparecer_escudo(){
+        t1.src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png" 
+        t2.src="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F2026.png" 
+        t3.src="https://upload.wikimedia.org/wikipedia/commons/9/92/LogoSantosFC.png" 
+        t4.src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/200px-Palmeiras_logo.svg.png" 
+    }
+
+</script>

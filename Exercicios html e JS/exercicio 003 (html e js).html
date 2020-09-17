@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    
+    <button onclick="carnes()">Carnes</button>
+    <button onclick="legumes()">Legumes</button>
+    <button onclick="frutas()">Frutas</button>
+
+    <div id = "div_compras">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    function carnes(){
+        div_compras.innerHTML = "Eu amo carnes S2";
+        div_compras.style.color = "White";
+        div_compras.style.backgroundColor = "red";
+        document.title = "Último clique: Botão de Carnes"
+    }
+
+    function legumes(){
+        div_compras.innerHTML = "Eu não curto muito legumes :/";
+        div_compras.style.color = "yellow";
+        div_compras.style.backgroundColor = "black";
+        document.title = ("último clique: Botão de Legumes")
+    }
+
+    function frutas(){
+        div_compras.innerHTML = "Gosto de algumas frutas";
+        div_compras.style.color = "green";
+        div_compras.style.backgroundColor = "white";
+        document.title = "Último clique: Botão de Frutas"
+        
+    }
+
+</script>

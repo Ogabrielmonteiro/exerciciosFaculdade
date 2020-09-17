@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+
+    <h1>O que faz um triatleta?</h1>
+
+    <button onclick="nada()">Nada</button> 
+    <button onclick="corre()">Corre</button> 
+    <button onclick="pedala()">Pedala</button> 
+
+   <div> <img id="imagem" style="width: 1000px;"></div>
+
+</body>
+</html>
+
+<script>
+
+    function nada(){
+        imagem.src = "https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0RG000000i2SO2MAM/579204e2e4b091eea871acc4.jpg&w=710&h=462";
+        imagem.alt = "Imgem pessoa nadando";
+    }
+
+    function corre(){
+        imagem.src = "https://s2.glbimg.com/9hW22TAtxEq5UyFK-_iQnLx7GZ4=/290x159/smart/s2.glbimg.com/swBV550_blv78bgTpLkzbvMp61I=/0x345:5145x3177/690x380/s.glbimg.com/es/ge/f/original/2015/08/03/gettyimages-537657173.jpg";
+        imagem.alt = "pessoa correndo";
+    }
+
+    function pedala(){
+        imagem.src = "https://static.poder360.com.br/2019/01/Hamilton-Mourao-Paula-Mourao-Bicicleta-Palacio-Alvorada-307.jpg";
+        imagem.alt = "pessoa pedalando";
+    }
+</script>

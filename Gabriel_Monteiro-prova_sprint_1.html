@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros simples</title>
+</head>
+
+<body>
+
+    <!-- Título e imagem -->
+    <div style="background-color: rgb(255, 255, 255);height: 10px;width: 100px;float: left;">
+    </div>
+    <img src="https://i.pinimg.com/736x/4f/f6/b2/4ff6b239ac7138672b3ce54863f724e2.jpg" alt="logo porcentagem, boneco pensativo" width="55px" style="float: left;">
+    <div style="background-color: rgb(255, 255, 255);height: 10px;width: 54px;float: left;">
+    </div>
+    <h1><u>Juros simples</u></h1>
+
+    
+    <!-- Input's e background deles -->
+    <div style="background-color: rgb(86, 158, 3);height: 50px;width: 200px;float: left;">
+        <b>Valor do Capital:</b> <br> 
+        <input id="capital" placeholder="Ex: 542"> <br>
+    </div>
+    <div style="background-color: rgb(86, 158, 3);height: 50px;width: 200px;float: left;">
+        <b>Valor da taxa sem "%":</b> <br> 
+        <input id="porcentagem" placeholder="Ex: 1.5"> <br>
+    </div>
+    <div style="background-color: rgb(86, 158, 3);height: 50px;width: 177px;float: left;">
+        <b>Numero de meses:</b> <br> 
+        <input id="meses" placeholder="Ex: 33"> <br>
+    </div>
+
+    <br><br><br>
+
+    <!-- Botão de juros -->
+    <div style="background-color: rgb(255, 255, 255);height: 70px;width: 140px;float: left;"></div>
+    <div style="float: left;"><button onclick="juros()">
+        Valor do Juros
+    </button>
+    <div id="div_juro" ></div> 
+    </div>  
+
+     <!-- Botão de montante -->
+    <div style="background-color: rgb(255, 255, 255);height: 20px;width: 80px; float: left;"></div>  
+   <div style="float: left;"><button onclick="montante()">
+        Valor do Montante
+    </button>
+    <div id="div_montante"></div>
+    </div> 
+</body>
+
+</html>
+
+<script>
+
+    // Função para calcular o juros simples
+    function juros() {
+        var juros_simples = Number(capital.value) * Number(porcentagem.value) * Number(meses.value) / 100;
+        div_juro.innerHTML = `<b> R$ </b> <span style = "color:red"> <b> <i>  ${juros_simples} </i> </b>`;
+    }
+
+    // Função para somar o juros simples com o capital
+    function montante(){
+        var montante = Number(capital.value) + (Number(capital.value) * Number(porcentagem.value) * Number(meses.value) / 100);
+        div_montante.innerHTML = `<b> R$ </b> <span style = "color:green"> <b><i> ${montante} </i> </b>`;
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<body>
+    <h1>GENTE</h1>
+
+    <button onclick="gente_timida()">
+        Gente tímida
+    </button>
+    <button onclick="gente_causa()">
+        Gente que causa
+    </button>   
+<br><br>
+  <span id="gente" style="display: block;"><img src="https://image.freepik.com/fotos-gratis/cara-confiante-e-bonito-esta-de-pe-e-apontando_152404-2234.jpg" alt="pessoa confiante">
+
+    </span>
+</body>
+</html>
+
+<script>
+
+    function gente_timida() {
+        gente.style.display ="none"
+    }
+
+    function gente_causa() {
+        gente.style.display ="block"
+    }
+</script>

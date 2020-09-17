@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6 </title>
+</head>
+<body>
+    
+    <h1>Brasil X Alemanha</h1>
+
+    <button onclick="gol_brasil()">Gol do Brasil</button>
+    <button onclick="gol_alemanha()">Gool da Alemanha</button>
+    <button onclick="recomecar()">Recomeçar partida</button>
+    <p><b>Tempo real do jogo:</b></p>
+
+    <div id="div_brasil" style="display: block;"></div>
+    <div id="div_alemanha" style="display: block;"></div>
+
+</body>
+</html>
+
+<script>
+
+    function gol_brasil(){
+        div_brasil.innerHTML += " <span><br> É goooolll do Brasil!!! </span>" ;
+        div_brasil.style.color = "green"
+        div_brasil.style.backgroundColor = "White"
+    }
+
+    function gol_alemanha(){
+        div_alemanha.innerHTML += "  <br> É goooolll da Alemanha!!!";
+        div_alemanha.style.color = "yellow"
+        div_alemanha.style.backgroundColor = "red"
+    }
+
+    function recomecar(){
+        div_alemanha.style.display ="none";
+        div_brasil.style.display ="none";
+    }
+
+</script>

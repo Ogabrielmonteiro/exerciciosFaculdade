@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    
+    <h1>A história de uma pizza</h1>
+
+    <button onclick="pizza_1()"> Acabou de chegar </button>
+    <button onclick="pizza_2()"> Depois de 1 minuto </button>
+    <button onclick="pizza_3()"> Depois de 5 minuto </button>
+    <button onclick="pizza_4()"> Depois de 15 minutos </button>
+
+    <div></div><img id="pizza" style="width: 600px;"><div>
+
+</body>
+</html>
+
+<script>
+
+    function pizza_1(){
+        pizza.src = "https://images.freeimages.com/images/premium/previews/3527/35272092-whole-pizza-on-the-wooden-table.jpg";
+        pizza.alt = "pizza inteira";
+    }
+
+    function pizza_2(){
+        pizza.src = "https://media-cdn.tripadvisor.com/media/photo-s/12/63/8e/5a/pizza-media-6-fatias.jpg";
+        pizza.alt = "pizza menos 2 pedaços";
+    }
+
+    function pizza_3(){
+        pizza.src = "https://comps.canstockphoto.com.br/pizza-pepperoni-metade-banco-de-fotos_csp6970642.jpg";
+        pizza.alt = "pizza metade";
+    }
+
+    function pizza_4(){
+        pizza.src = "https://w1.ezcdn.com.br/rebalcomercial/fotos/grande/221fg1/prato-sobremesa-porcelana-19-cm-convencional-schmidt-sch-003.jpg";
+        pizza.alt = "prato vazio";
+    }
+
+    
+
+</script>
