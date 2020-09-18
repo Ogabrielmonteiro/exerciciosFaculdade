@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9 </title>
+</head>
+<body>
+    <center>
+        <h1>Clique no cemafaro para ficar com a cor forte</h1>
+    <Div style="background-color: black; width: 300PX; height: 380PX; border-radius: 10%;">
+        
+        <img id="img1" onclick="pare()" src="https://media.discordapp.net/attachments/746087767569727599/756572325666619412/cor_verm_fraco.png?width=461&height=461" alt="bola verde" width="120px"> <br>
+        <img id="img2" onclick="atencao()" src="https://cdn.discordapp.com/attachments/746087767569727599/756572337536499813/cor_amar_fraco.png" alt="bola verde"width="125px"> <br>
+        <img id="img3" onclick="siga()" src="https://media.discordapp.net/attachments/746087767569727599/756572347284193390/cor_ver_fraco.png?width=461&height=461" alt="bola verde"width="120px"> <br>
+        
+        
+    </Div>
+<div id="finalmente" style="width: 200px; width: 250px; border-radius: 50%;"><b></b></div>
+</center>
+</body>
+</html>
+
+<script>
+
+function pare(){
+    finalmente.innerHTML = "Pare! Aguarde o verde!"
+    finalmente.style.color = "White"
+    finalmente.style.backgroundColor = "red"
+    img1.src = "https://media.discordapp.net/attachments/746087767569727599/756569062623936673/cor_verm_forte.png?width=500&height=500"
+    img2.src = "https://cdn.discordapp.com/attachments/746087767569727599/756572337536499813/cor_amar_fraco.png"
+    img3.src = "https://media.discordapp.net/attachments/746087767569727599/756572347284193390/cor_ver_fraco.png?width=461&height=461"
+}
+
+function atencao(){
+    finalmente.innerHTML ="Só siga se estiver perto e rápido."
+    finalmente.style.color = "black"
+    finalmente.style.backgroundColor = "yellow"
+    img1.src = "https://media.discordapp.net/attachments/746087767569727599/756572325666619412/cor_verm_fraco.png?width=461&height=461"
+    img2.src = "https://media.discordapp.net/attachments/746087767569727599/756569028960452648/cor_amar_forte.png?width=461&height=461"
+    img3.src = "https://media.discordapp.net/attachments/746087767569727599/756572347284193390/cor_ver_fraco.png?width=461&height=461"
+}
+
+function siga(){
+    finalmente.innerHTML = "Siga s2"
+    finalmente.style.color = "white"
+    finalmente.style.backgroundColor = "green"
+    img1.src = "https://media.discordapp.net/attachments/746087767569727599/756572325666619412/cor_verm_fraco.png?width=461&height=461"
+    img2.src = "https://cdn.discordapp.com/attachments/746087767569727599/756572337536499813/cor_amar_fraco.png"
+    img3.src = "https://cdn.discordapp.com/attachments/746087767569727599/756569041442701332/cor_ver_forte.png"
+}  
+
+</script>

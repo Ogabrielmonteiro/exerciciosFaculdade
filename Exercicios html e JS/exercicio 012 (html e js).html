@@ -3,11 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercicio 6 </title>
+    <title>exercicio 6 e 7</title>
 </head>
 <body>
-
-    <h1><b><u>ki base do Guerreiro Sayajin: 2000</u></b></h1>
+    <h1>ki base do Guerreiro Sayajin: 2000</h1>
     
+    <img id="volta" src="https://i.pinimg.com/originals/9c/0f/11/9c0f11757a8b125b1ae34a4088d1b589.jpg" alt="foto goku normal" style="width: 200px;"> 
+
+    <br>
+    <button onclick="ssj()"> trasformar em SSJ</button>
+    <button onclick="ssj2()"> trasformar em SSJ2</button>
+    <button onclick="ssj3()"> trasformar em SSJ3</button>
+    <button onclick="voltar()">Resetar</button>
+    <div id="ki_base"></div>
+    
+    
+        
+   
 </body>
 </html>
+
+<script>
+
+    function ssj(){
+        ki_base.innerHTML = "ki na forma SSJ: 100000";
+        ki_base.style.color = "darkblue"
+        volta.src = "https://pm1.narvii.com/6464/2e90af6766b73bf7a5e5f39e5da49e42a891b9d3_hq.jpg"
+    }
+
+    function ssj2(){
+        ki_base.innerHTML = "ki na forma SSJ2: 200000";
+        ki_base.style.color = "yellow";
+        ki_base.style.backgroundColor = "blue";
+        volta.src = "https://www.kindpng.com/picc/m/645-6452416_dokkan-battle-goku-ssj2-angel-hd-png-download.png"
+    }
+
+    function ssj3(){
+        ki_base.innerHTML = "ki na forma SSJ3: 400000";
+        ki_base.style.color = "orange";
+        ki_base.style.backgroundColor = "yellow";
+        volta.src = "https://cutewallpaper.org/21/super-saiyan-3-wallpapers/Download-Super-Saiyan-3-Wallpaper-Google-Play-softwares-.jpg"
+    }
+
+    function voltar(){
+       ki_base.innerHTML = "";
+       volta.src = "https://i.pinimg.com/originals/9c/0f/11/9c0f11757a8b125b1ae34a4088d1b589.jpg"
+    }
+
+</script>
