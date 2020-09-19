@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 Eleição com barras</title>
+</head>
+
+<body>
+    Qual a quantidade de votos de Gabriel Monteiro <br> <input id="in_gabriel"> <br> <br>
+    Qual a quantidade de votos de Giovanna Arvage Monteiro <br> <input id="in_giovanna"> <br> <br>
+    Qual a quantidade de votos brancos <br> <input id="in_brancos"> <br> <br>
+    Qual a quantidade de votos nulos <br> <input id="in_nulos"> <br> <br>
+
+    <Button onclick="resultado()"> Resultado da Eleição</Button>
+    <div id=final></div>
+       
+
+</body>
+
+</html>
+
+<script>
+
+    function resultado() {
+        var total = Number(in_gabriel.value) + Number(in_giovanna.value) + Number(in_brancos.value) + Number(in_nulos.value)
+        var branco_nulo = Number(in_brancos.value) + Number(in_nulos.value)
+        var candidato1 = Math.round(Number(in_gabriel.value) / Number(total) * 100)
+        var candidato2 = Math.round(Number(in_giovanna.value) / Number(total) * 100)
+        var invalidos = Math.round(Number(branco_nulo) / Number(total) * 100)
+        final.innerHTML = `<br> <b> Total dos votos: <u>${total}</u></b> <br>
+                           <span style="background-color: green;height:30px ; width:${candidato1} px ;"> </span> <br>
+                           <br><b> Gabriel Monteiro: </b> ${candidato1}% (${in_gabriel.value} Votos) <br>
+                           <b> Giovanna Arvage Monteiro: </b> ${candidato2}% (${in_giovanna.value} Votos) <br>
+                           <b> Inválidos: </b>${invalidos}% (${branco_nulo} Votos) <br>`                     
+    }
+
+</script>

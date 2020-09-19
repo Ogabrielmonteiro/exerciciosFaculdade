@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 sono</title>
+</head>
+
+<body>
+    Quantas horas de sono você dormiu? <input id="in_horas">
+    <button onclick="hora()">Resultado</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+<script>
+
+    function hora() {
+        var h1 = Number(in_horas.value) * 0.05
+        var h2 = Number(in_horas.value) * 0.45
+        var h3 = Number(in_horas.value) * 0.30
+        var h4 = Number(in_horas.value) * 0.20
+
+        resultado.innerHTML = `${h1} Horas de sono na primera fase <br> 
+                               ${h2} Horas de sono na segunda fase <br>
+                               ${h3} Horas de sono na terceira fase <br>
+                               ${h4} Horas de sono na fase rem <br>`
+    }
+
+</script>

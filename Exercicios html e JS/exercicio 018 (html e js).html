@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <h1>Tabuada</h1>
+    Fale um numero: <input id="valor">
+
+    <button onclick="resultado()"> Ver Tabuada </button>
+    <div id="calculo"></div>
+</body>
+
+</html>
+
+<script>
+
+    function resultado() {
+        var n1 = Number(valor.value) * 1
+        var n2 = Number(valor.value) * 2
+        var n3 = Number(valor.value) * 3
+        var n4 = Number(valor.value) * 4
+        var n5 = Number(valor.value) * 5
+        var n6 = Number(valor.value) * 6
+        var n7 = Number(valor.value) * 7
+        var n8 = Number(valor.value) * 8
+        var n9 = Number(valor.value) * 9
+        calculo.innerHTML = `${valor.value} X 1 = ${n1} <br>
+                             ${valor.value} X 2 = ${n2} <br>
+                             ${valor.value} X 3 = ${n3} <br>
+                             ${valor.value} X 4 = ${n4} <br>
+                             ${valor.value} X 5 = ${n5} <br>
+                             ${valor.value} X 6 = ${n6} <br>
+                             ${valor.value} X 7 = ${n7} <br>
+                             ${valor.value} X 8 = ${n8} <br>
+                             ${valor.value} X 9 = ${n9} <br>`
+    }
+
+</script>
