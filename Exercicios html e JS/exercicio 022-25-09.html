@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amin Tiroso - exercicio 4 e 7 </title>
+</head>
+<body>
+
+    Quantas latinhas bebe por dia? <input id="in_latinha">
+
+    <button onclick="resultado()">Quantos refris?</button>
+
+    <div id="final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function resultado(){
+        var ano = Number(in_latinha.value) * 365;
+            final.innerHTML = `Você consome ${ano} latinhas por ano`;
+        if (ano >= 500){
+            final.innerHTML = `Você consome ${ano} latas por ano.
+            <span style="background-color: red; color:white">Cuidado com a diabetes!`
+        }
+        
+    }
+
+</script>

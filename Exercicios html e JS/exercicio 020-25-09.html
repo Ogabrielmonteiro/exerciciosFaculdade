@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio seguro carro - exercicio 2</title>
+</head>
+<body>
+
+    <h2>Valor seguro do carro</h2>
+    Quantidade de infração? <br> <input id="in_infracoes"><br>
+    Qual o valor do carro ? <br> <input id="in_carro"> <br>
+    
+    <button onclick="calcular_seguro()">Calcular Seguro</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular_seguro(){
+        var infracoes = Number(in_infracoes.value);
+        var carro = Number(in_carro. value);
+
+        var seguro = carro * 0.015;
+
+        if (infracoes < 3){
+            seguro = seguro * 0.9;
+        }
+
+        div_resultado.innerHTML = `Seu seguro ficará em R$${seguro.toFixed(2)} reais`
+    }
+
+</script>

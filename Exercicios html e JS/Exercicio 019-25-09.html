@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    
+    <h2>Compras maça</h2>
+    Quantidade de maça: <input id="in_quantidade"> <br>
+
+    <button onclick="final()">Finalizar compra</button>
+
+</body>
+</html>
+
+<script>
+
+    function final(){
+        var macas = Number(in_quantidade.value);
+        var preco_maca = 0.75
+
+        if (macas >=10){
+            preco_maca = 0.68;
+        }
+
+        var total = macas * preco_maca;
+        alert (`Total a pagar: R$${total.toFixed(2)}`)
+    }
+
+</script>

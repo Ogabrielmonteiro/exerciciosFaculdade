@@ -23,10 +23,11 @@
         var h3 = Number(in_horas.value) * 0.30
         var h4 = Number(in_horas.value) * 0.20
 
-        resultado.innerHTML = `${h1} Horas de sono na primera fase <br> 
-                               ${h2} Horas de sono na segunda fase <br>
-                               ${h3} Horas de sono na terceira fase <br>
-                               ${h4} Horas de sono na fase rem <br>`
+        resultado.innerHTML =`Ao dormir <u>${in_horas.value}</u> horas, você dormiu:<br>
+                                        <u>${h1}</u> Horas de sono na <b> primera fase </b> <br> 
+                                        <u>${h2}</u> Horas de sono na <b>segunda fase </b> <br>
+                                        <u>${h3}</u> Horas de sono na <b>terceira fase </b> <br>
+                                        <u>${h4}</u> Horas de sono na <b>fase rem</b> <br>`
     }
 
 </script>
