@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: #43545d;
+}
+
+.btn {
+    border: 3px solid white;
+    padding: 10px 30px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-left: 580px;
+}
+
+.btn_solucao {
+    border: 3px solid white;
+    padding: 10px 30px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-left: 570px;
+}
+
+.container {
+    width: 70%;
+    height: 110px;
+    margin: auto;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: #799eca;
+    height: 100px;
+    border-bottom: 30px #07889d solid;
+}
+
+.navbar img {
+    float: left;
+    margin-top: -90px;
+    width: 250px;
+}
+
+.navbar ul {
+    float: right;
+    text-transform: uppercase;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.navbar h1 span {
+    color: #799eca;
+}
+
+.current {
+    color: #799eca;
+}
+
+.home {
+    width: 100%;
+    height: 400px;
+    background: url(../imagens/home.png) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 80px;
+    border-bottom: 10px #07889d solid;
+}
+
+.home h1 {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 130px;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sobre {
+    width: 100%;
+    background-color: #097688;
+    margin-top: 80px;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    height: 278px;
+}
+
+.sobre h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sobre p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.sobre p span {
+    text-align: center;
+    font-size: 14px;
+}
+
+.solucao {
+    width: 100%;
+    background-color: #097688;
+    margin-top: 80px;
+    padding: 20px;
+    color: white;
+    margin-top: 250px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.solucao h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.solucao p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.solucao p span {
+    text-align: center;
+    font-size: 14px;
+}
+
+.cliente {
+    background: url(../imagens/mercados.png) no-repeat center;
+    width: 100%;
+    background-color: #097688;
+    margin-top: 80px;
+    padding: 20px;
+    color: white;
+    margin-top: 275px;
+    height: 275px;
+    border-radius: 15px;
+}
+
+.cliente h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cliente p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.cliente p span {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer {
+    margin-top: 180px;
+    color: #ffffff;
+    height: 70px;
+    border-bottom: 80px #054953 solid;
+}
+
+.footer h1 {
+    color: rgb(110, 0, 0);
+}

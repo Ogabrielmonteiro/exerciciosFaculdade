@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+</head>
+<body>
+    
+    Sua primeira nota<input id="in_n1" > <br>
+    Sua segunda nota<input id="in_n2" > <br>
+
+    <button onclick="calcular()">Avaliar</button>
+    <div id="div_final"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var media = (Number(in_n1.value) + Number(in_n2.value)) / 2;
+        if (media>=6){
+        div_final.innerHTML = `sua média foi: ${media} Parabéns, aprovado(a)!`
+        
+        }
+        else
+        div_final.innerHTML = `sua média foi: ${media} Parabéns, aprovado(a)!`
+    }
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 21</title>
+</head>
+<body>
+
+    <input id="in_numero" placeholder="Digite um número">
+    <br>
+    <button onclick="elevarQuadrado()">Elevar ao quadrado</button>
+    <button onclick="aumentar1()">Aumentar em 1</button>
+    <button onclick="diminuir5()">Diminui em 5</button>
+    <button onclick="aumentar1simples()"> Aumentar em 1 simples</button>
+
+    <br> <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function elevarQuadrado(){
+        var elevaQuadrado = Number(in_numero.value) ** 2;
+        div_resultado.innerHTML = `seu numero ao quadrado é ${elevaQuadrado}`;
+    }
+
+    function aumentar1(){
+        var aumenta = Number(in_numero.value);
+        aumenta += 1;
+        div_resultado.innerHTML = ` o numero ${in_numero.value} + 1 = ${aumenta}`
+    }
+    function diminuir5(){
+        var diminui = Number(in_numero.value);
+        diminui -= 5;
+        div_resultado.innerHTML = ` o numero ${in_numero.value} - 5 = ${diminui}`
+    }
+    function aumentar1simples(){
+        var aumentasimples = Number(in_numero.value);
+        aumentasimples++;
+        div_resultado.innerHTML = ` o numero ${in_numero.value} + 1 = ${aumentasimples}`
+    }
+    
+</script>
