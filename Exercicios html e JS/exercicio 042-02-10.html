@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+
+    <div id="div_final">Valor guardado no cofrinho: R$0.00</div>
+    Qual o valor vai ser depositado? <input id="in_valor" >
+    <button onclick="colocar()">Depositar</button>
+    <button onclick="tirar()">Tirar toda a grana</button>
+</body>
+</html>
+
+<script>
+    function colocar(){
+    var cofrinho = Number(in_valor.value);
+        div_final.innerHTML = `Valor guardado no cofrinho: R$${cofrinho.toFixed(2)}`;
+    }
+
+    function tirar(){
+    var valor = Number(in_valor.value)
+    valor -= valor;
+        div_final.innerHTML = `Valor guardado no cofrinho: R$${valor.toFixed(2)}`;
+    }
+
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4 - desafio</title>
+</head>
+
+<body>
+
+    <button onclick="calcular()">Clica nimim</button>
+    <div id="div_final">Você já clicou 0 vezes</div>
+
+</body>
+
+</html>
+
+<script>
+    var soma = 0
+    function calcular() {
+        soma += 1
+        div_final.innerHTML = `Você já clicou ${soma} vezes`
+    }
+
+</script>

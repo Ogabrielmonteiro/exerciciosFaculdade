@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+
+    Me fale um número <input id="in_a"> <br>
+    Me fale outro número <input id="in_b"> <br>
+
+    <button onclick="calcular()">Calcular Raiz</button>
+    <div id="div_final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var calculo = Number(in_b.value) ** Number(1/in_a.value)
+        div_final.innerHTML = ` a ${in_b.value} raiz  de ${in_a.value} dá ${calculo}`
+    }
+
+</script>

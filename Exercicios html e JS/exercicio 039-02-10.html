@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 8 desafio</title>
+</head>
+<body>
+
+    Qual o valor do carro a vista? <input id="in_avista" >
+    <br>
+    Taxa de juros a.m <input id="in_juros" >
+    <br>
+    Quantidade de parcelas: <input id="in_parcela" >
+    <br>
+    <button onclick="calcular()">Calcular prejú</button>
+    <div id="div_final"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var valor_a_vista = Number(in_avista.value);
+        var taxa_juros = Number(in_juros.value);
+        var qtd_parcelas = Number(in_parcela.value);
+        
+        var primeiro_termo = (valor_a_vista/ qtd_parcelas);
+        var razao = 1 + (taxa_juros/100);
+
+        var valor_a_praso = primeiro_termo * ((razao ** qtd_parcelas) - 1);
+        valor_a_praso /= (razao - 1);
+        var valor_apos_compra = valor_a_vista * 0.8;
+        var qtd_carros_a_vista = valor_a_praso / valor_a_vista;
+        
+        div_final.innerHTML = `Seu carro vai sair por um total de R$${valor_a_praso.toFixed(2)} <br>
+        Após 1 mês, ele já vai valer só R$${valor_apos_compra.toFixed(2)} Porque comprou financiado,<br> 
+        vai pagar o correspondente a ${qtd_carros_a_vista.toFixed(2)} carros`
+
+    }
+
+</script>

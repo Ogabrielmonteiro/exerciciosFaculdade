@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 9</title>
+</head>
+<body>
+
+    Quantas pessoas estão infectadas? <br>
+    <input id="in_pessoas" > <br>
+
+    <button onclick="calcular()">pessoas infectadas ontem</button> <br>
+    <button onclick="amanha()">Quantas pessoas infectadas amanhã"</button> <br>
+    <button onclick="mes()">Quantas pessoas infectadas daqui a 1 mês</button> <br>
+    <div id="div_final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var ontem = Number(in_pessoas.value);
+        ontem -=35
+        div_final.innerHTML = ` Ontem haviam ${ontem} pessoas infectadas`
+    }
+
+    function amanha(){
+        var amanha = Number(in_pessoas.value);
+        amanha += 35
+        div_final.innerHTML = `Amanhã haverão ${amanha} pessoas infectadas`
+    }
+
+    function mes(){
+        var infectados = 30*35;
+        var mes = Number(in_pessoas.value);
+        var total = infectados + mes;
+        div_final.innerHTML = `Daqui a 1 mês haverão ${total} pessoas infectadas`
+    }
+</script>

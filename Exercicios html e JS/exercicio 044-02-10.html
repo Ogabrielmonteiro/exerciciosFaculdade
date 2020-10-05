@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 13</title>
+</head>
+
+<body>
+
+    <div id="div_pao_frances"> Porções de pão francês: 0 </div>
+    <div id="div_carne_bovina"> Porções de carne boniva: 0 </div>
+    <div id="div_carne_soja"> Porções de carne de soja: 0 </div>
+    <div id="div_arroz_feijao"> Porções de arroz com feijão: 0 </div>
+    <div id="div_recomeçar"> <b>Total de calorias:</b> 0 </div>
+
+    <button onclick="cal_pao_frances()">Comer um pão francês</button>
+    <button onclick="cal_carne_bovina()">Comer porção de carne boniva</button>
+    <button onclick="cal_carne_soja()">Comer porção de carne de soja</button>
+    <button onclick="cal_arroz_feijao()">Comer porção de arroz com feijão</button>
+    <button onclick="recomeçar()">Recomeçar</button>
+
+</body>
+
+</html>
+
+<script>
+
+    var conta_final = 0;
+
+    var pão_fran = 0;
+    function cal_pao_frances() {
+        pão_fran += 1;
+        conta_final += 50;
+        div_pao_frances.innerHTML = `Porções de pão francês: ${pão_fran}`;
+        div_recomeçar.innerHTML = `<b>Total de calorias:</b> ${conta_final}`;
+    }
+
+    var carne_bovina = 0;
+    function cal_carne_bovina() {
+        carne_bovina += 1;
+        conta_final += 100;
+        div_carne_bovina.innerHTML = `Porções de carne boniva: ${carne_bovina}`
+        div_recomeçar.innerHTML = `<b>Total de calorias:</b> ${conta_final}`;
+    }
+
+    var carne_soja = 0;
+    function cal_carne_soja() {
+        carne_soja += 1;
+        conta_final += 30;
+        div_carne_soja.innerHTML = `Porções de carne de soja: ${carne_soja}`
+        div_recomeçar.innerHTML = `<b>Total de calorias:</b> ${conta_final}`;
+    }
+
+    var arroz_feijao = 0;
+    function cal_arroz_feijao() {
+        arroz_feijao += 1;
+        conta_final += 120;
+        div_arroz_feijao.innerHTML = `Porções de arroz com feijão: ${arroz_feijao}`
+        div_recomeçar.innerHTML = `<b>Total de calorias:</b> ${conta_final}`;
+    }
+
+    function recomeçar() {
+        conta_final = 0;
+        pão_fran = 0;
+        carne_bovina = 0;
+        carne_soja = 0;
+        arroz_feijao = 0
+        div_pao_frances.innerHTML = `Porções de pão francês: ${pão_fran}`;
+        div_carne_bovina.innerHTML = `Porções de carne boniva: ${carne_bovina}`;
+        div_carne_soja.innerHTML = `Porções de carne de soja: ${carne_soja}`;
+        div_arroz_feijao.innerHTML = `Porções de arroz com feijão: ${arroz_feijao}`;
+        div_recomeçar.innerHTML = "<b>Total de calorias:</b> 0";
+
+    }
+
+</script>

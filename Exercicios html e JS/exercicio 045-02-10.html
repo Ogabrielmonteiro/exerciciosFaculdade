@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 14</title>
+</head>
+
+<body>
+
+    <button onclick="iniciar()">Iniciar jogo</button> <br>
+    <img onclick="lutador1()"
+        src="https://cdn.discordapp.com/attachments/746086654732796057/762797573471076432/MJWuPJ4xNYgAAAABJRU5ErkJgggA.png"
+        alt="scorpion do mortal kombat" id="scorpion" style="display: none;">
+        <br>
+
+        <div style="width: 1910px; height: 50px; background-color: rgb(139, 0, 0); display: none;" id="barra1"></div>
+
+        <br>
+
+    <img onclick="lutador2()"
+        src="https://cdn.discordapp.com/attachments/746086654732796057/762797604571709480/xOGbtDJPQYl0QAAAABJRU5ErkJgggA.png"
+        alt="sub zero do mortal kombat" id="sub_zero" style="display: none;">
+        <br>
+
+        <div style="width: 1910px; height: 50px; background-color: rgb(139, 0, 0); display: none;" id="barra2"></div>
+
+    <div style="display: none;" id="txt_lutador1">Golpes sofridos pelo lutador 1:<b> 0 </b></div>
+    <div style="display: none;" id="txt_lutador2">Golpes sofridos pelo lutador 2:<b> 0 </b></div> 
+        <br>
+    
+
+</body>
+
+</html>
+
+<script>
+
+    function iniciar() {
+        scorpion.style.display = "block";
+        sub_zero.style.display = "block";
+        txt_lutador1.style.display = "block";
+        txt_lutador2.style.display = "block";
+        barra1.style.display = "block";
+        barra2.style.display = "block";
+
+    }
+
+    var vida1 = 100
+    var vida2 = 100
+
+    var l1 = 0;
+    function lutador1() {
+        l1 += 1;
+        vida1 -= 5;
+        barra1.style.width = `${vida1}%`
+        txt_lutador1.innerHTML = `Golpes sofridos pelo lutador 1:<b>${l1}</b>`;
+    }
+
+    var l2 = 0;
+    function lutador2() {
+        l2 += 1;
+        vida2 -= 5;
+        barra2.style.width = `${vida2}%`
+        txt_lutador2.innerHTML = `Golpes sofridos pelo lutador 2:<b>${l2}</b>`;
+    }
+</script>

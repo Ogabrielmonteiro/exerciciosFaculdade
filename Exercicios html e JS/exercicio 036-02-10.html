@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 5</title>
+</head>
+<body>
+
+    Me fale um número <input id="in_n1"> <br>
+    Me fale outro número <input id="in_n2"> <br>
+
+    <button onclick="calcular()">Fazer potência</button>
+    <div id="div_final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var calculo = Number(in_n1.value) ** Number(in_n2.value);
+        div_final.innerHTML = `${in_n1.value} elevado a ${in_n2.value} dá ${calculo}`
+    }
+
+</script>

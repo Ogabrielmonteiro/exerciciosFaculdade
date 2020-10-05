@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 7</title>
+</head>
+<body>
+
+    qual o primeiro número da progressão?<br> <input id="in_a" > <br>
+    Qual a razão ?<br> <input id="in_q" ><br>
+    Qual número da progressão deseja ver?<br> <input id="in_n" > <br>
+
+    <button onclick="calcular()">Calcular PG</button>
+    <div id="div_final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var a = Number(in_a.value);
+        var n = Number(in_n.value);
+        n -= 1
+        var q = Number(in_q.value) ** n;
+        var resultado = a * q;
+        div_final.innerHTML = `O ${in_q.value} termo nessa PG será ${resultado}`;
+    }
+
+</script>

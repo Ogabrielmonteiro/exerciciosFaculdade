@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 10</title>
+</head>
+<body>
+
+    <button onclick="oito()">08 passagens</button>
+    <button onclick="vinte()">20 passagens</button>
+    <button onclick="cinquenta()">50 passagens</button>
+
+    <div id="div_final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function oito(){
+        var calculo =100 - (32.45 / 35.20) * (100)
+        var passagem = 35.20 - 32.45
+        passagem /=4.40
+        div_final.innerHTML = ` Ao comprar 08 passagens, você pagou ${calculo.toFixed(1)}% a menos. É como se tivesse ganhado ${passagem.toFixed(0)} passagens de "bônus`
+    }
+
+    function vinte(){
+        var calculo =100 - (78.65 / 88) * (100)
+        var passagem = 88 - 78.65
+        passagem /=4.40
+        div_final.innerHTML = ` Ao comprar 20 passagens, você pagou ${calculo.toFixed(1)}% a menos. É como se tivesse ganhado ${passagem.toFixed(0)} passagens de "bônus`
+    }
+
+    function cinquenta(){
+        var calculo =100 - (191.41 / 220) * (100)
+        var passagem = 200 - 191.41
+        passagem /=4.40
+        div_final.innerHTML = ` Ao comprar 50 passagens, você pagou ${calculo.toFixed(1)}% a menos. É como se tivesse ganhado ${passagem.toFixed(0)} passagens de "bônus`
+    }
+
+</script>
