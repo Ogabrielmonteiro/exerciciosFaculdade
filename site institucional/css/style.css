@@ -8,6 +8,8 @@ a {
     color: #43545d;
 }
 
+/* Botão */
+
 .btn {
     border: 3px solid white;
     padding: 10px 30px;
@@ -19,6 +21,8 @@ a {
     letter-spacing: .1em;
     margin-left: 580px;
 }
+
+/* Botão Solução*/
 
 .btn_solucao {
     border: 3px solid white;
@@ -32,12 +36,14 @@ a {
     margin-left: 570px;
 }
 
+/* Container */
 .container {
     width: 70%;
     height: 110px;
     margin: auto;
 }
 
+/* Navbar */
 .navbar {
     background-color: #ffffff;
     color: #799eca;
@@ -71,6 +77,7 @@ a {
     color: #799eca;
 }
 
+/* Home */
 .home {
     width: 100%;
     height: 400px;
@@ -91,6 +98,7 @@ a {
     text-transform: uppercase;
 }
 
+/* Sobre */
 .sobre {
     width: 100%;
     background-color: #097688;
@@ -116,6 +124,7 @@ a {
     font-size: 14px;
 }
 
+/* Solução */
 .solucao {
     width: 100%;
     background-color: #097688;
@@ -142,15 +151,16 @@ a {
     font-size: 14px;
 }
 
+/* Cliente */
 .cliente {
     background: url(../imagens/mercados.png) no-repeat center;
     width: 100%;
     background-color: #097688;
-    margin-top: 80px;
+    margin-top: 70px;
     padding: 20px;
     color: white;
     margin-top: 275px;
-    height: 275px;
+    height: 300px;
     border-radius: 15px;
 }
 
@@ -161,7 +171,7 @@ a {
 
 .cliente p {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .cliente p span {
@@ -169,17 +179,7 @@ a {
     font-size: 14px;
 }
 
-.footer {
-    margin-top: 180px;
-    color: #ffffff;
-    height: 70px;
-    border-bottom: 80px #054953 solid;
-}
-
-.footer h1 {
-    color: rgb(110, 0, 0);
-}
-
+/* Sobre */
 .sobre_info {
     width: 100%;
     background-color: #097688;
@@ -202,4 +202,16 @@ a {
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/*Rodape*/
+.footer {
+    margin-top: 180px;
+    color: #ffffff;
+    height: 70px;
+    border-bottom: 80px #054953 solid;
+}
+
+.footer h1 {
+    color: rgb(110, 0, 0);
 }

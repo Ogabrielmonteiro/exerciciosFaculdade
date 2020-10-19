@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5 e 6</title>
+</head>
+<body>
+
+    Quantos pães franceses você consome por dia? <br> <input id="in_pao" > <br>
+    Quantos pacotes de bolacha recheada você consome por dia? <br> <input id="in_bolacha" > <br>
+    Quantos copos de achocolatado você consome por dia? <br> <input id="in_achocolatado" > <br>
+
+    <button onclick="calcular()"> Verificar calorias </button>
+    <div id="div_texto"></div>
+    <img id="img_peso" style="width: 180px;">
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var pao = Number(in_pao.value) * 50;
+        var bolacha = Number(in_bolacha.value) * 80;
+        var achocolatado = Number(in_achocolatado.value) * 70;
+        var soma = pao + bolacha + achocolatado;
+
+        if ( soma > 200 && soma <=400){
+            div_texto.innerHTML = "Cuidado, vai ficar mais fofinho(a) após quarentena!"
+            img_peso.src = "https://conteudo.imguol.com.br/blogs/260/files/2018/11/iStock-823811374-1024x683.jpg"
+        }
+
+        else if (soma < 200){
+            div_texto.innerHTML = "Parabéns, vai sair em forma da quarentena!";
+            img_peso.src = "https://saudesporte.com.br/wp-content/uploads/2013/10/Como-come%C3%A7ar-a-correr.png";
+        }
+
+        else{
+            div_texto.innerHTML = "Bom, acho que muitos não vão te reconhecer após a quarentena"
+            img_peso.src = "https://imagem.band.com.br/f_176531.jpg"
+        }
+    }
+
+</script>

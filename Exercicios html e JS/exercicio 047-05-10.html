@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+
+<select id="in_times">
+    <option value="0">- Qual time da grande São Paulo você torce? -</option>
+    <option value="1">Corinthians</option>
+    <option value="2">Palmeiras</option>
+    <option value="3">Santos</option>
+    <option value="4">São Paulo</option>
+</select> 
+
+    <button onclick="resultado()">Fale sobre esse time</button>
+    <div id="div_texto"></div>
+    
+    
+</body>
+</html>
+
+<script>
+
+    function resultado(){
+        var time = Number(in_times.value)
+
+        if (time == 1){
+            div_texto.innerHTML = `<span style = "color:White ; background-color: black"> Salve o Corinthians</span>`;
+        }else if(time == 2){ 
+            div_texto.innerHTML = `<span style = "color:White ; background-color:green"> Salve o alviverde imponente</span>`;
+        }else if(time == 3){
+            div_texto.innerHTML = `Agora que dá a bola é o Santos`;
+        }
+        else{
+            div_texto.innerHTML = `<span style = "color:red ; background-color:black"> Salve o Tricolor paulista</span>`;
+        }
+
+    }
+
+</script>

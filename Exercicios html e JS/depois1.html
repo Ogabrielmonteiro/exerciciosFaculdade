@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> desafio </title>
+</head>
+<body>
+    
+    Qual time da grande são paulo você torce?
+    <select id="in_time">
+        <option value="0">- Selecione o time -</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png"> Palmeiras </option>
+        <option value="https://www.santosfc.com.br/wp-content/themes/santosfc-theme/assets/images/logo-santos.png"> Santos </option>
+        <option value="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F2026.png"> São paulo </option>
+        <option value="https://a3.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F874.png"> Corinthians </option>
+    </select>
+    <br>
+
+    <img id="img_escudo" style="width: 150px;" >
+    <br>
+    <button onclick="calcular()">VER ESCUDO</button>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        img_escudo.src = in_time.value;
+    }
+
+</script>

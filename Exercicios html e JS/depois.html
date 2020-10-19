@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista select - q01</title>
+</head>
+<body>
+
+    Qual bebida você deseja?
+    <select id="in_bebida">
+        <option value="0">- selecione a bebida-</option>
+        <option value="2"> Água </option>
+        <option value="3"> Refrigerante </option>
+        <option value="5"> Cerveja </option>
+    </select>
+    <br>
+    Qual refeição você deseja?
+    <select id="in_refeicao">
+        <option value="0">- selecione a refeição</option>
+        <option value="5">Salada</option>
+        <option value="15">Feijoada</option>
+        <option value="20">Bife a Cavalo</option>
+        <option value="15">Peixe Frito</option>
+    </select>
+    <br>
+    Qual o nome do usuário? <br> <input id="in_nome" >
+
+    <button onclick="calcular()"> Calcular total a pagar </button>
+    <div id="div_texto"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var bebida = Number(in_bebida.value)
+        var refeicao = Number(in_refeicao.value)
+        var total = bebida + refeicao
+
+        div_texto.innerHTML = `olá,${in_nome.value}. Seu almoço vai custar um total de R$${total.toFixed(2)}`
+    }
+
+</script>

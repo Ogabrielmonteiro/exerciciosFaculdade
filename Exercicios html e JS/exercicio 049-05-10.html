@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 7</title>
+</head>
+<body>
+    
+    <select id="in_meses">
+        <option value="0">- Escolha um dos meses do ano -</option>
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select>
+
+    <button onclick="estacoes()">Qual o clima?</button>
+    <div id="div_texto"></div>
+    <img id="img_estacoes" style="width: 120px;" >
+</body>
+</html>
+
+<script>
+
+    function estacoes(){
+        var meses = Number(in_meses.value);
+
+        if(meses == 12 && 1  && 2){
+            div_texto.innerHTML = "Inverno";
+            img_estacoes.src = "https://static.mundoeducacao.uol.com.br/mundoeducacao/2020/06/inverno.jpg";
+
+        }else if(meses == 3 && 4 && 5){
+            div_texto.innerHTML = "Primavera";
+            img_estacoes.src = "https://segredosdomundo.r7.com/wp-content/uploads/2019/09/primavera-a-estacao-da-fertilidade-das-chuvas-e-das-cores-5.jpg";
+
+        }else if(meses == 6 && 7 && 8){
+            div_texto.innerHTML = "Verão";
+            img_estacoes.src = "https://conhecimentocientifico.r7.com/wp-content/uploads/2020/04/verao-caracteristicas-quando-ocorre-solsticio-e-horario-de-verao.jpg";
+
+        }else if(meses == 9 && 10 && 11){
+            div_texto.innerHTML = "Outono";
+            img_estacoes.src = "https://conhecimentocientifico.r7.com/wp-content/uploads/2020/03/outono-caracteristicas-quando-se-inicia-e-estacao-do-ano-no-brasil.jpeg";
+        }
+    
+    }
+
+</script>

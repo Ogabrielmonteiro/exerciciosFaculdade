@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade brinquedo</title>
+</head>
+<body>
+
+    Qual sua idade? <br> <input id="in_idade" > <br>
+    Qual o seu peso? <br> <input id="in_peso" > <br>
+
+    <button onclick="calcular()"> Pode brincar</button>
+    <div id="div_texto"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var idade = Number(in_idade.value)
+        var peso = Number(in_peso.value)
+
+        if (idade >15 && peso<=100){
+            div_texto.innerHTML = `<span style = "color:blue"> Você poderá brincar :) </span>`;
+        }
+        else{
+            div_texto.innerHTML = `<span style = "color:red"> Você não poderá brincar :( </span>`;
+        }
+    }
+
+</script>
