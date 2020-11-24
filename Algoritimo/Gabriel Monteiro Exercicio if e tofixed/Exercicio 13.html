@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series - exercicio 13</title>
+</head>
+<body>
+    
+    Qual foi a ultima seria que você assistiu? <br>
+    <input id="in_serie"> <br>
+
+    <br>
+
+    Qual foi o total de episódios que você assistiu? <br>
+    <input id="in_episodio"></inpu>
+
+    <br>
+
+    <button onclick="calcular()"> Verificar nível </button>
+    <div id="div_final"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+    var nome = (in_serie.value)
+        div_final.innerHTML = `Vejo que você gosta da série: ${nome}`
+    var tempo = Number(in_episodio.value) * 22 / 60
+
+    if(tempo > 30){
+        div_final.innerHTML = `Vejo que você gosta da série: ${nome}! <br>
+                               Uau, você realmente gosta dessa série!`
+        }
+    }
+
+</script>

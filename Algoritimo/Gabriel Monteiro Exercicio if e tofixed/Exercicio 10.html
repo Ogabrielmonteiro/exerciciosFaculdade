@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renda familiar - exercicio 10</title>
+</head>
+<body>
+
+    Qual o valor da sua renda familiar? <br>
+    <input id="renda"> <br>
+
+    <br>
+
+    Qual o valor da prestação? <br>
+    <input id="prestacao"> <br>
+
+    <br>
+
+    <button onclick="calcular()"> Verificar financiamento </button>
+    <div id="div_final"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var prest_familia = Number(prestacao.value) / Number(renda.value) * 100
+        div_final.innerHTML = `A prestação corresponde a ${prest_familia.toFixed(1)}% da renda familiar`
+
+        if(prest_familia > 30)
+        div_final.innerHTML = `A prestação corresponde a ${prest_familia.toFixed(1)}% da renda familiar e <br>
+        <b style= "color:red"> Será necessário complementar a renda familiar</b>`
+    }
+
+</script>

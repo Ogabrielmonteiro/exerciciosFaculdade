@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos fora de serie - exercicio 5</title>
+</head>
+<body>
+    
+    Qual o valor da sua primeira nota? <br> <input id="in_1"> <br> 
+    Qual o valor da sua segunda nota? <br>  <input id="in_2"> <br> 
+    Qual o valor da sua terceira nota? <br>  <input id="in_3"> <br> <br> 
+
+    <button onclick="calcular()"> Analisar desempenho </button>
+    <div id="div_final"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var media = Number(in_1.value) + Number(in_2.value) + Number(in_1.value) / 3 
+        div_final.innerHTML = `<b> Sua média foi de ${media.toFixed(2)} </b>`
+
+        if(media >9.4)
+        div_final.innerHTML = "Parabéns, você é fora de série!"
+
+    }
+
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 35</title>
+</head>
+
+<body>
+    <input placeholder="Informe um país p/ viajar" id="in_pais">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br>
+    <button onclick="ver()">Ver destinos</button>
+
+    <br>
+    <div id="div_destinos"></div>
+</body>
+
+</html>
+
+<script>
+
+    var paises = [];
+
+    function cadastrar() {
+        var viagem = in_pais.value;
+        paises.push(viagem);
+
+    }
+
+    function ver() {
+        for (var posicao = 0; posicao < paises.length; posicao++) {
+            var atual = paises[posicao]
+            if(posicao % 2 == 0){
+                div_destinos.innerHTML += `${atual} <br>`;
+            }else{
+                div_destinos.innerHTML += `<b>${atual}<b/> <br>`;
+            }
+        }
+    }
+
+</script>

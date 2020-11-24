@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Pizzaria Monteiros</h1>
+    
+    Qual é o seu nome ? <br> <input id="in_nome" placeholder="Ex:Gabriel Monteiro"> <br> <br>
+    Qual é o seu endereço ? <br> <input id="in_endereco" placeholder="Ex:Rua Gustavo Adolfo, 124">
+
+    <p>Seleciono os itens do seu pedido: </p>
+
+    <select id="in_bebida">
+        <option value="0">- Escolha a bebida -</option>
+        <option value="10.0"> Coca Cola 2L </option>
+        <option value="5.0"> Fanta laranja 2L </option>
+        <option value="7.0"> H2o 2L </option>
+        <option value="3.0"> Laranjinha 350ml </option>
+    </select>
+
+    <select id="in_pizza">
+        <option value="0">- Escolha o sapor da pizza -</option>
+        <option value="29.90">Frango com catupiry</option>
+        <option value="55.50">Toscana</option>
+        <option value="42.20">Bahiana</option>
+        <option value="35.99">Calacatu</option>
+    </select>
+
+    <select id="in_borda">
+        <option value="0">- Escolha a sua borda -</option>
+        <option value="6.50">Catupiry</option>
+        <option value="4.99">Cheddar</option>  
+    </select>
+    <br> <br>
+    <button onclick="calcular()">Resultado</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="div_texto"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var valor = Number(in_bebida.value) + Number(in_pizza.value) + Number(in_borda.value);
+        var nome = in_nome.value;
+        var endereco = in_endereco.value;
+
+        div_texto.innerHTML = `Sr(a) <span style = "color:orange">${nome}</span> o valor do seu pedido é <span style = "color:green">R$${valor.toFixed(2)}</span> e sera entregue na <b><u> ${endereco}</u></b>`;
+    }
+
+    function limpar(){
+        div_texto.innerHTML = "";
+        in_nome.value = "";
+        in_endereco.value = "";
+        in_bebida.value = "0";
+        in_pizza.value = "0";
+        in_borda.value = "0";
+    }
+
+</script>

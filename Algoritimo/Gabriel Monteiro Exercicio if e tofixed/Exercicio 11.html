@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Itado - exercicio 11</title>
+</head>
+<body>
+
+    Qual o saldo da sua conta? <br>
+    <input id="saldo"> <br>
+
+    <br>
+
+    Qual o valor do débito? <br>
+    <input id="debito"> <br>
+
+    <br>
+
+    <button onclick="calcular()"> Analisar conta </button>
+    <div id="div_final"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var calculo = Number(saldo.value) - Number(debito.value)
+        div_final.innerHTML = ` O saldo atual da conta corrente é R$${calculo.toFixed(2)} reais`
+
+        if(calculo < 0)
+        div_final.innerHTML = `<b style= "color:red"> O saldo atual da conta corrente é R$${calculo.toFixed(2)} reais </b>`
+    }
+
+</script>

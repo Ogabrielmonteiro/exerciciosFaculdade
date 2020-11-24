@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantos escudos deseja? <br> <input id="in_numero_escudo" placeholder="Ex:20">
+    <br><br>
+    Quantos escudos por linha? <br> <input id="in_itens_linha" placeholder="Ex:3">
+    <br> <br>
+    Qual o tamanho dos escudos? <br> 
+    <select id="lista_tamanhos">
+        <option value="0">-Escolha o tamanho-</option>
+        <option value="50">pequeno</option>
+        <option value="100">médio</option>
+        <option value="200">Grande</option>
+    </select>
+    <br> <br>
+    Escolha o escudo do time: <br> 
+    <select id="lista_escudos"> 
+        <option value="0">-Escolha um escudo-</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg">Palmeiras</option>
+        <option value="https://pbs.twimg.com/profile_images/806148836783702016/r5sf2mDu_400x400.jpg">Santos</option>
+        <option value="https://pbs.twimg.com/profile_images/1322888823504855043/l-FdXgW5.jpg">Flamengo</option>
+    </select>
+    <br> <br>
+    <button onclick="ver_escudos()">Amo o escudo do meu time!</button>
+    <br> 
+    <div id="div_escudos">
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function ver_escudos() {
+        div_escudos.innerHTML = "";
+        for (var contador = 0; contador < in_numero_escudo.value; contador++) {
+            div_escudos.innerHTML += `<img width = "${lista_tamanhos.value}" src="${lista_escudos.value}"> `
+            if((contador + 1) % in_itens_linha.value == 0){
+                div_escudos.innerHTML += "<br>";
+            }            
+        }
+    }
+
+</script>

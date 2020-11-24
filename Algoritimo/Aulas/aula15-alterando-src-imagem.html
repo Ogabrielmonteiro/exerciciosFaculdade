@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 - Trocando uma imagem</title>
+</head>
+<body>
+    
+    <h3>Mudança de tempo</h3>
+
+    <button onclick="nublado()">Mudar para nublado</button>
+    <button onclick="chuvoso()">Mudar para chuvoso</button>
+
+    <br>
+
+    <img id="img_clima" src="https://image.freepik.com/fotos-gratis/paisagem-do-mar-negro-em-um-dia-ensolarado-brilhante-tarkhankut-crimeia_73209-76.jpg" alt="dia ensolarado" style="width: 600px;">
+
+</body>
+</html>
+
+<script>
+
+    function nublado(){
+        img_clima.src = "https://lh3.googleusercontent.com/proxy/ONbFeOLZTa3PKFcFv5StKlI0FQjV9m6SgVj7lASbsZFxaHxxp4lIpB25LCMNJpSNXQewJOwZOnpxW9JCFTJqgZHKPsUZ_TMHzxVMIcj8BhnVcsou0eSq-NEAW_pSFEMxGgiz2WPfNuFYlAtd9pn4GJgBMPbisXNenho";
+    }
+
+    function chuvoso(){
+        img_clima.src = "https://static.portaldacidade.com/unsafe/1150x767/https://s3.amazonaws.com/cruzeirodooeste.portaldacidade.com/img/news/2019-11/dia-chuvoso-em-toda-a-regiao-nesta-quinta-feira-14-5dcd8a1f8323f.jpg" ;
+    }
+
+</script>

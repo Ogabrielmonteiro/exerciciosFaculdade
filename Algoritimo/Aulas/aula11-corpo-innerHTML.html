@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Fala muito na prória página</h3>
+
+    <button onclick="falar_coisas_boas()">
+        Falar coisas boas
+    </button>
+    <button onclick="fofocar()">
+        Focar
+    </button>
+    <button onclick = "falar_da_bandtec()">
+        Falar da bandtec
+    </button>
+<!-- id = "div_mensagem" é a etiqueta da tag-->
+    <div id="div_mensagem">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+// innertHTML é a mensagem que vai aparecer na id
+    function falar_coisas_boas(){
+        div_mensagem.innerHTML = "Força, foco e fé!";
+    }
+
+    function fofocar() {
+        div_mensagem.innerHTML = "O Yoshi faz cosplay do caio Ribeiro!";
+    }
+
+    function falar_da_bandtec() {
+        div_mensagem.innerHTML = "O Tiago é muito alto ! <br> A marise é portuguesa! <br> Estamos aprendendo Javascript";
+    }
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio filhos - exercicio 3</title>
+</head>
+
+<body>
+
+    Quantos filhos você tem? <br>
+    <input id="in_filhos"> <br>
+
+    <button onclick="verificar()"> Verificar situação</button>
+    <div id="div_final"></div>
+</body>
+
+</html>
+
+<script>
+
+    function verificar() {
+        var filho = Number(in_filhos.value);
+        if (filho == 0){
+            div_final.innerHTML = `Sem descendentes`;
+
+        }
+
+        if (filho == 1){
+            div_final.innerHTML = `Filho único`;
+        }
+
+        if (filho >= 2){
+            div_final.innerHTML = `Crescei e multiplicai-vos!`;
+        }
+         
+    }
+
+</script>

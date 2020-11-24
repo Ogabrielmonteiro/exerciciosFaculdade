@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18</title>
+</head>
+<body>
+
+    <h2>Mini cadastro</h2>
+    <!-- INPUT é uma entrada de dados -->
+    Seu nome:<input id ="in_nome"> <br>
+    Seu bairro:<input id ="in_bairro"> <br>
+
+    <!-- placeholder marca d agua dentro da caixa de input -->
+    <input id ="in_idade" placeholder="sua idade" > <br>
+
+    <button onclick="cadastrar()">
+        Fazer cadastro
+    </button>
+
+    <button onclick="cadatrar_bonitinho()">
+        Fazer cadastro bonitinho
+    </button>
+
+    <button onclick="cadastrar_lindo()">
+        Fazer cadastro
+    </button>
+
+    <div id="div_cadastro">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+   function cadastrar(){
+    alert(in_nome.value);
+    alert(in_bairro.value);
+    alert(in_idade.value);
+   } 
+
+   function cadatrar_bonitinho() {
+    //    abaixo são CRASES no inicio e fim, não aspas simples
+    //    ${} - > Sifrão e Chaves, chaves não parenteses nen colchetes
+       alert(`Você se chama ${in_nome.value}`);
+       alert(`${in_bairro.value} é um bairro Maravilhoso!`);
+       alert(`e a sua idade  é ${in_idade.value} anos.`);
+    
+
+       alert(`cadastro: Você se chama ${in_nome.value},${in_bairro.value} é um bairro Maravilhoso!,e a sua idade  é ${in_idade.value} anos.`)
+
+   }
+
+   function cadastrar_lindo(){
+        div_cadastro.innerHTML = `
+        <b> Nome cadastrado: </b> <u> ${in_nome.value} </u> <br>
+        <b> Bairro cadastrado: </b> <u>${in_bairro.value} </u> <br>
+        <b> Idade cadastrada: </b> <span style = "color:blue"> <u> ${in_idade.value} </u> <br> </span>
+        `;
+   }
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1, 2</title>
+</head>
+<body>
+    Qual seria a frase a ser exibida? <input type="text" id="in_frase">
+    <br>
+    Qual a quantidade de repetições? <input type="text" id="in_repeticao">
+    <br>
+    <button onclick="filosofar()">
+        Filosofar
+    </button>
+
+    <div id="div_texto"></div>
+</body>
+</html>
+
+<script>
+    in_repeticao.value == ""
+    in_frase.value = ""
+
+    function filosofar(){
+        for (var filosofia = 0; filosofia < 7 ; filosofia++){
+        div_texto.innerHTML += `${in_frase.value} <br>`
+        }
+        if (Nunber(in_repeticao.value) <0 ){
+            alert ('Quantidade inválida')
+        }
+    }
+</script>

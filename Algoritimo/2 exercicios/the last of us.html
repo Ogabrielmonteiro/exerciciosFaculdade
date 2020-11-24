@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+
+    <h1>The last of us: Part 2</h1>
+    <p>Selecione o personagem que deseja saber curiosidades sobre:</p>
+    <select id="in_personagen">
+        <option value="0">- Selecione um dos personagem -</option>
+        <option value="1">Ellie</option>
+        <option value="2">Abby</option>
+        <option value="3">Dina</option>
+    </select>
+
+    <br> <br>
+    <button onclick="resultado()">resultado</button> 
+    <button onclick="limpar()">limpar</button> 
+    
+    <div id="div_texto"></div>
+    <br> <br>
+    <img id="imagem" style="width: 200px;">
+</body>
+</html>
+
+<script>
+
+    function resultado(){
+        if(in_personagen.value == "1"){
+            div_texto.innerHTML = ` <h3> <span style = "color:blue"> Ellie </h3></span> É a protagonista de The Last of Us Parte 2. Sua voz é feita <br>por Ashley Johnson, atriz de 36 anos, que é conhecida do grande público por atuar no <br>seriado Ponto Cego, da NBC, no papel de Patterson. Apesar de ser a voz de Ellie, a <br>aparência de Johnson não foi usada na personagem. A Sony deixa a inspiração do visual de <br>Ellie envolta em mistérios, assim como acontece com boa parte do elenco do primeiro e <br>deste segundo jogo`;
+
+            imagem.src = "https://s2.glbimg.com/zAuFWZ-Em7z3fMYk-Ls1ZK-NR5o=/0x0:2048x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/p/t/hVztf3TzSo8F699HUs9g/8af7b586-0324-4bda-96bc-0c7ce4e2526b.jpg";
+        }
+
+       
+
+    else if(in_personagen.value == "2"){
+        div_texto.innerHTML = `<h3> <span style = "color:blue"> Abby </h3></span> Antagonista de The Last of Us Parte 2, Abigail “Abby” Anderson <br>foi alvo de inúmeras polêmicas na Internet, em especial pelo tipo de ações que ela toma <br>dentro da história. Sua voz é feita por Laura Bailey, que não é tão conhecida por sua <br>carreira de atriz em TV ou filmes, mas sim por atuar em muitos videogames – Avengers, <br>Spider-Man, Gears 5, World of Warcraft, entre outros. O detalhe importante é que Abby teve <br>seu rosto inspirado pela designer Jocelyn Mettler e, segundo rumores, o corpo baseado em <br>Colleen Fotsch, que é conhecida por ser “body builder”. É uma das poucas personagens dos dois <br>games a ter três inspirações distintas.`;
+
+        imagem.src = "https://s2.glbimg.com/ZSwDUToheMxeRHjSTEfj6w63Ues=/0x0:2048x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/P/i/2Nq2BgRfeVhLQV17FAzw/943897ae-6f13-4b28-ad74-f285a76f114c.jpg";
+
+        }
+
+    else if(in_personagen.value == "3"){
+        div_texto.innerHTML = `<h3> <span style = "color:blue"> Dina </h3></span> Shannon Woodward, de 36 anos, é a voz de Dina, personagem que faz par <br>romântico com Ellie ao longo da história. Ela ficou ligeiramente <br>famosa nos últimos anos ao interpretar Elsie Hughes, uma das técnicas<br> do parque tecnológico no seriado Westworld, da HBO. Já a <br>aparência de Dina foi baseada em Cascina Caradonna, atriz de teatro e YouTuber.`;
+
+        imagem.src = "https://s2.glbimg.com/M0Nc_C7udampe9i7RUkSXWC3i_E=/0x0:2048x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/Q/9/N77JexRua1h97OeXfbpA/f4b4e342-afe8-4fc2-99df-daf9b84554af.jpg";
+        }
+
+    }
+
+    function limpar(){
+        div_texto.innerHTML = "";
+        imagem.src = "";
+        in_personagen.value= "0";
+    }
+</script>

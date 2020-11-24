@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 34</title>
+</head>
+
+<body>
+
+    <input placeholder="Cadastre uma fruta" id="in_fruta">
+    <button onclick="cadastrar()">
+        cadastrar fruta
+    </button>
+    <br> <br>
+    Primeira cadastrada: <b id="b_primeira"></b>
+    <br>
+    Primeira cadastrada: <b id="b_ultima"></b>
+    <br>
+    3º cadastrada cadastrada: <b id="b_terceira"></b>
+    <br>
+    Total a pagar(cada fruta custa 2,50): R$<b id="b_total"></b>
+</body>
+
+</html>
+
+<script>
+    var frutas = [];
+
+    function cadastrar() {
+
+        var nova_fruta = in_fruta.value;
+
+        frutas.push(nova_fruta);
+
+        console.log(frutas);
+        b_primeira.innerHTML = frutas[0];
+        b_ultima.innerHTML = frutas[frutas.length - 1];
+        if (frutas.length >= 3) {
+            b_terceira.innerHTML = frutas[2];
+        }
+        if (frutas.length % 4 == 0) {
+            alert('Nossa, você come em caralho')
+        }
+        var total = (frutas.length * 2.5)
+        if (total < 12.5) {
+            b_total.innerHTML = `${total}`
+        } else if (total < 12.5 && total <= 25.0) {
+            b_total.innerHTML = `${total - 1}`
+        } else if (total >= 25.0) {
+            b_total.innerHTML = `${total - 3}`
+        }
+    }
+</script>

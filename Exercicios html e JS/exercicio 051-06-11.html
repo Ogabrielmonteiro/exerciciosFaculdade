@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+
+    <button onclick="calcular()">
+        Ver pares
+    </button>
+    
+    <div id="div_texto"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        for(pares = 0; pares<= 100; pares+= 2)
+        div_texto.innerHTML += `${pares} <br>`
+    }
+
+</script>
