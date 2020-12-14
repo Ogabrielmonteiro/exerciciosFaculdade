@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+<body>
+    
+    Cadastre seu numero : <input type="text" id="in_cadastrarNumero">
+    <br>
+    <select id="comboTipoDeBusca">
+        <option value="0">-Escolha um modo de busca-</option>
+        <option value="1">Busca Completa</option>
+        <option value="2">Busca first-item</option>
+    </select>
+    <br>
+    <button onclick="cadastrarNumero()">Cadastrar Numero</button>
+    <br>
+    <button onclick="buscarNumero()">Buscar Número</button>
+
+</body>
+</html>
+
+<script>
+    var listaNumero = [];
+    function cadastrarNumero(){
+        listaNumero.push(in_cadastrarNumero.value)
+    }
+
+    function buscarNumero(){
+        var buscaCompleta = (tipoBusca == "Busca Completa");
+        var numeroPesquisado = in_cadastrarNumero
+        var tipoBusca = comboTipoDeBusca.value
+
+        if(buscaCompleta){
+            var quantidadeEncontrada = 0
+
+            for(cont = 0; cont < listaNumero.length; cont++){
+                var numero = listaNumero[cont];
+                if(numero == numeroPesquisado){
+                    quantidadeEncontrada++
+                }
+                alert(`O número ${numeroPesquisado} aparece ${quantidadeEncontrada} vezes na lista`)
+            }
+
+        }else{
+            var posicaoEncontrada = -1;
+            for(cont = 0 ; cont < listaNumero.length; cont++){
+                var numero = listaNumero[cont]
+                if(numero == numeroPesquisado){
+                    posicaoEncontrada = cont + 1;
+                    break;
+                }
+            }
+            if(posicaoEncontrada > 0){
+                alert(`O numero ${numeroPesquisado} foi encontrado na posição ${posicaoEncontrada}`);
+            }else{
+                alert(`O número ${numeroPesquisado} não está na lista`)
+            }
+        }
+
+        
+    }
+</script>

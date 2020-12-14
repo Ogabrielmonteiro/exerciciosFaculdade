@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ot-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+</head>
+
+<body>
+
+    <input placeholder="Quantas medalhas de ouro teve?" id="in_medalha_ouro">
+    <input placeholder="Quantas medalhas de prata teve?" id="in_medalha_prata">
+    <input placeholder="Quantas medalhas de bronze teve?" id="in_medalha_bronze">
+    <br>
+    <button onclick="resultado()">Resultado</button>
+    <br>
+    <div id="div_texto"></div>
+</body>
+
+</html>
+
+<script>
+
+    function resultado() {
+
+        var medalhas = {
+            ouro: Number(in_medalha_ouro.value),
+            prata: Number(in_medalha_prata.value),
+            bronze: Number(in_medalha_bronze.value)
+        }
+
+        medalhas.pontos = (medalhas.ouro * 10000) + (medalhas.prata * 100) + (medalhas.prata)
+        div_texto.innerHTML = `Total de medalhas: ${medalhas.pontos}`
+    }
+
+</script>   

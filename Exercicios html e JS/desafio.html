@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deafio</title>
+</head>
+
+<body>
+
+    Qual o nome do filme? <input type="text" id="in_nomeFilme"> <br>
+    <button onclick="cadastrarFilme()">Cadastrar filme</button>
+    <br>
+    <button onclick="verificarDuplicidade()"> Verificar Duplicidade </button>
+    <br>
+    <div id="textoFinal"></div>
+</body>
+
+</html>
+
+<script>
+    var listaFilmes = [];
+
+    function cadastrarFilme() {
+       listaFilmes.push(in_nomeFilme.value)
+        textoFinal.innerHTML = `${listaFilmes}`
+    }
+
+    function verificarDuplicidade(){
+        var filmePesquisa = in_nomeFilme.value;
+        var quantidadeEncontrada = 0
+        for (cont = 0; cont < listaFilmes.length; cont++){
+            var filme = listaFilmes[cont];
+            if(filmePesquisa == filme){
+                quantidadeEncontrada += 1
+            }
+        }
+        alert(`O filme ${filmePesquisa} aparece ${quantidadeEncontrada} vezes na lista`)
+    }
+
+</script>

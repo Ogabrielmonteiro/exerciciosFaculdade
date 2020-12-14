@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+<body>
+    Qual o nome do aluno: <input type="text" id="in_nomeAluno">
+    <br>
+    Qual a inicial do nome: <input maxlength="1" type="text" id="in_letraInicialDoNome">
+    <br>
+    <button onclick="cadastrarNovoAluno()">Cadastrar novo aluno</button>
+    <br>
+    <button onclick="verificarAluno()">Verificar Aluno</button>
+</body> 
+</html>
+
+<script>
+    nomeAluno = []
+    function cadastrarNovoAluno(){
+        nomeAluno.push(in_nomeAluno.value)
+    }
+    
+    function verificarAluno(){
+        var letraPesquisa = in_letraInicialDoNome.value;
+        var alunoEncontrado = 0;
+
+        while(cont < nomeAluno.lenght){
+            var aluno = nomeAluno[cont];
+            if(aluno.toLowerCase().startsWith(letraPesquisa.toLowerCase())){
+                alunoEncontrado++;
+            }
+            cont++
+        }
+        if(alunoEncontrado > 0){
+            alert(`Foram encontrados ${alunoEncontrado} alunos com a inicial ${letraPesquisa}`);
+        }else{
+            alert("Não foi encontrado alunos com a letra pequisada")
+        }
+    }
+</script>   

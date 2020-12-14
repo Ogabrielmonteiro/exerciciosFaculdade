@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+</head>
+
+<body>
+
+    Qual o nome do astronauta? <br> <input id="in_nome_astronauta"> <br>
+    Quantidade de dias: <br> <input id="in_quantidade_dias"> <br>
+    Quantidade de horas: <br> <input id="in_horas"> <br>
+    Quantidade de minutos: <br> <input id="in_minutos"> <br> <br>
+    <button onclick="registrar_viagem()">Registrar viagem</button>
+    <br> <br>
+    <button onclick="relatorio_de_viagens()">Relatório de viagens</button>
+    <div id="div_relatorio"></div>
+    <br>
+    <div id="div_texto_fim"></div>
+
+</body>
+
+</html>
+
+<script>
+    var registrar = [];
+    function registrar_viagem() {
+
+        var viajante = {
+            nome: in_nome_astronauta.value,
+            dias: Number(in_quantidade_dias.value),
+            horas: Number(in_horas.value),
+            minutos: Number(in_minutos.value)
+        }
+
+        if (viajante.dias <= 0 && viajante.horas <= 0 && viajante.minutos <= 0) {
+            alert("Informe um viajante de viagem válido!");
+        } else {
+            registrar.push(viajante);
+        }
+
+    }
+
+    function relatorio_de_viagens() {
+        var cont = 0
+        div_relatorio.innerHTML = `Foram registradas ${registrar.length} viagens detalhadas a seguir: <br>`;
+        var img = ""
+        for (var i = 0; i < registrar.length; i++) {
+            var anos_na_terra = (((registrar[i].dias * 1440) + (registrar[i].horas * 60) + (registrar[i].minutos)) / 525600) * 120;
+            cont++
+
+            if(anos_na_terra <= 1){
+                img = 'bart-bebe.png' 
+            }
+            else if(anos_na_terra >= 1 && anos_na_terra <= 13){
+                img = 'bart-crianca.png';
+            }
+            else if(anos_na_terra > 13 && anos_na_terra <= 30){
+                img = `bart-adolescente .png`;
+            }
+            else if(anos_na_terra > 30 && anos_na_terra <= 45){
+                img = 'bart-adulto.png';
+            }
+            else if(anos_na_terra > 45 && anos_na_terra <= 90){
+                img = 'bart-idoso.png';
+            }
+            else if(anos_na_terra > 90){
+                img = 'bart-esqueleto.png';
+            }
+
+            div_relatorio.innerHTML += `<br><br>Viagem :<b> ${cont}</b> <br>
+            Astronauta <b>${registrar[i].nome} </b> ficou fora por pelo menos <b>${parseInt(anos_na_terra)}</b> anos no tempo da Terra. <br> Como a pessoa estava quando ele chegou? <br> <img src="${img}">`
+        }
+        // div_texto_fim.innerHTML = `O astronauta que passou mais tempo foi o NOME, que ficou pelo menos X anos no tempo da Terra viajando. Essa foi a Yª viagem registrada. `
+    }
+</script>

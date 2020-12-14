@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    Nome dos projetos <input id="in_nome_projeto">
+    <br>
+    <button onclick="registrar()">Registrar projeto</button>
+    <br>
+    <div id="resultado">
+        <br>
+        Você já fez <b id="numero_projetos">0</b> projetos. Por isso você é um profissional
+        <span id="cargo"><b>Júnior</b></span> </div>
+</body>
+
+</html>
+<script>
+    var projeto = [];
+    function registrar() {
+        projeto.push(in_nome_projeto.value);
+        numero_projetos.innerHTML = projeto.length;
+        if (projeto.length <= 4) {
+            cargo.innerHTML = '<b>Júnior</b>';
+        }
+        else if (projeto.length <= 12) {
+            cargo.innerHTML = `<b>Pleno</b> desde o projeto ${projeto[4]}`;
+        } else { cargo.innerHTML = `<b>Sênior</b> desde o projeto ${projeto[12]}`; }
+    }
+
+</script>

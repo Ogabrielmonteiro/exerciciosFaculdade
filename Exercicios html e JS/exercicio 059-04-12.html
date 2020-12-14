@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 3</title>
+</head>
+<body>
+
+    <select id="in_select">
+        <option value="Homem">Homem</option>
+        <option value="Mulher">Mulher</option>
+        <option value="Crianca">Criança</option>
+    </select>
+    <br>
+    <button onclick="registrar()">Entrar no elevador</button>
+    <br>
+    <button onclick="verElevador()">Ver elevador</button>
+    <br>
+    <p id="in_primeira"></p>
+    <p id="in_quarta" style="display: none"></p>
+    <p id="in_setima" style="display: none"></p>
+    <div id="div_pessoas"></div>
+
+    <script>
+    
+        var pessoas = [];
+
+        function registrar(){
+            var selecao = in_select.value;
+            pessoas.push(selecao);
+        }
+
+        function verElevador(){
+            div_pessoas.innerHTML = "";
+
+            in_primeira.innerHTML = `
+                A 1ª pessoa foi um(a) ${pessoas[0]} (Homem, mulher ou criança)
+            `;
+
+            in_quarta.innerHTML = ` A 4ª pessoa foi um(a) ${pessoas[3]} (Homem, mulher ou criança)`;
+
+            in_setima.innerHTML = `A 7ª pessoa foi um(a) ${pessoas[6]} (Homem, mulher ou criança)`
+
+            if(pessoas.length == 4){
+                in_quarta.style.display = "block"
+            }else if(pessoas.length == 7){
+                in_setima.style.display = "block"
+            }
+
+            for(var i = 0; i < pessoas.length;i++){
+                var img = '';
+                if(pessoas[i] == "Homem"){
+                    img = "img/homem.png";
+                    div_pessoas.innerHTML += `
+                        <img src=${img} style='width: 100px;'>
+                    `;
+                }else if(pessoas[i] == "Mulher"){
+                    img = "img/mulher.png";
+                    div_pessoas.innerHTML += `
+                        <img src=${img} style='width: 100px;'>
+                    `;
+                }else{
+                    img = "img/crianca.png";
+                    div_pessoas.innerHTML += `
+                        <img src=${img} style='width: 100px;'>
+                    `;
+                }
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

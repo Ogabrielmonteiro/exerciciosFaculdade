@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    Linha de ônibus: <input id="in_linha"> 
+    <br>
+
+    <button onclick="gravar()">Gravar buzão</button> 
+    <br><br>
+
+    Pesquisar linha: <input id="in_pesquisar"> 
+    <br>
+
+    <button onclick="pesquisar()">Pesquisar</button>
+    <br> <br>
+
+    <div id="div_resultado_final"></div>
+</body>
+
+</html>
+<script>
+    var linhas = [];
+
+    function gravar() {
+        var linhaAtual = in_linha.value;
+
+        linhas.push(linhaAtual);
+        in_linha.value = '';
+    }
+
+    function pesquisar() {
+        var linhaPesquisada = in_pesquisar.value;
+        var posicoes = [];
+        var encontrado = false;
+        for (var contador = 0; contador < linhas.length; contador++) {
+            if (linhas[contador] == linhaPesquisada) {
+                encontrado = true;
+                posicoes.push(contador + 1);
+            }
+        }
+        if (encontrado) {
+            var textoPosicoes = '';
+
+            for (var contadorPosicoes = 0; contadorPosicoes < posicoes.length; contadorPosicoes++) {
+                if (contadorPosicoes == posicoes.length - 1) {
+                    textoPosicoes += `${posicoes[contadorPosicoes]}`;
+                } else {
+                    textoPosicoes += `${posicoes[contadorPosicoes]}, `;
+                }
+            }
+
+            div_resultado_final.innerHTML = `<b>Você já pegou essa linha ${posicoes.length} vezes, 
+            nessa ordem: ${textoPosicoes}</b>`;
+        } else {
+            div_resultado_final.innerHTML = `<b>Você nunca pegou essa linha</b>`;
+        }
+    }
+</script> 

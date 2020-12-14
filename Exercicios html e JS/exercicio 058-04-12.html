@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+</head>
+
+<body>
+
+    Coloque seu CEP <input id="in_cep">
+    <br>
+    Coloque seu Endereço <input id="in_endereco">
+    <br>
+    Coloque o apelido do endereco <input id="in_apelido">
+    <br>
+    <button onclick="cadastrar()">Cadastrar Endereço</button>
+    <br><br><br>
+    Pesquisar pelo CEP <input id="in_pesquisa">
+    <br>
+    <button onclick="pesquisar()">Pesquisar endereço</button><br>
+    <div id="div_endereco"></div>
+    <div id="div_busca"></div>
+</body>
+
+</html>
+<script>
+
+    var enderecos = []
+
+    function cadastrar() {
+        if (in_cep.value == "" || in_endereco.value == "" || in_apelido.value == "") {
+            alert("Preencha todos os campos")
+        } else {
+            div_endereco.innerHTML = "";
+            div_busca.innerHTML = "";
+            var endereco = {
+                apelido: in_apelido.value,
+                endereco_completo: in_endereco.value,
+                cep: in_cep.value
+            }
+            enderecos.push(endereco);
+            div_endereco.innerHTML = `${enderecos.length} CEPs cadastrados<br>`
+        }
+    }
+
+    function pesquisar() {
+        div_busca.innerHTML = "";
+
+        for (var posicao = 0; posicao < enderecos.length; posicao++) {
+            if (in_pesquisa.value == enderecos[posicao].cep) {
+                div_busca.innerHTML =
+                    `<br>Apelido: ${enderecos[posicao].apelido} 
+                    <br>
+                    Endereço: ${enderecos[posicao].endereco_completo} 
+                    <br>
+                    CEP: ${enderecos[posicao].cep}`
+                break;
+            } else {
+                div_busca.innerHTML = '<br>CEP não encontrado'
+            }
+        }
+    }
+
+</script>

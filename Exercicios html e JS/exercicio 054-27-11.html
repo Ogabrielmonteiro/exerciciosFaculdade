@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input placeholder="Vitórias do time 1" id="in_vitorias1">
+    <input placeholder="Empates do time 1" id="in_empates1">
+    <input placeholder="Derrotas do time 1" id="in_derrotas1">
+    <br>
+    <input placeholder="Vitórias do time 2" id="in_vitorias2">
+    <input placeholder="Empates do time 2" id="in_empates2">
+    <input placeholder="Derrotas do time 2" id="in_derrotas2">
+    <br>
+    <button onclick="finalizar()">Finalizar</button>
+
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+
+    function finalizar() {
+        // Criamos um JSON chamado "time1"
+        var time1 = {
+            vitorias: in_vitorias1.value,
+            empates: in_empates1.value,
+            derrotas: in_derrotas1.value
+        }
+
+        time1.pontos = (time1.vitorias*3) + (time1.empates*1);
+
+        // Criamos um JSON chamado "time2"
+        var time2 = {
+            vitorias: in_vitorias2.value,
+            empates: in_empates2.value,
+            derrotas: in_derrotas1.value  
+        }
+
+        time2.pontos = (time2.vitorias*3) + (time2.empates*1);
+
+        div_resultado.innerHTML = `
+        Time 1: ${time1.vitorias}v - ${time1.empates}e - ${time1.derrotas}d - ${time1.pontos}pts <br>
+        Time 2: ${time2.vitorias}v - ${time2.empates}e - ${time2.derrotas}d - ${time2.pontos}pts
+        `;
+    }
+</script>
